@@ -26,7 +26,13 @@ namespace ConsoleApplication2
             Complex result = new Complex(this.a + c.a, this.b + c.b);
             return result;
         }
-        
+
+        public Complex substract(Complex c)
+        {
+            Complex result = new Complex(this.a - c.a, this.b - c.b);
+            return result;
+        }
+
     }
     class Program
     {
