@@ -44,6 +44,11 @@ namespace ConsoleApplication2
             return result;
         }
 
+        public Complex divide(Complex c)
+        {
+            Complex result = new Complex(this.a / c.a, this.b / c.b);
+            return result;
+        }
     }
     class Program
     {
@@ -56,6 +61,8 @@ namespace ConsoleApplication2
             Complex.print(b.subtract(a1));
             Complex c = new Complex(2, 3);
             Complex.print(c.multiply(a1));
+            Complex d = new Complex(8, 3);
+            Complex.print(b.divide(d));
             Console.ReadKey();
         }
     }
