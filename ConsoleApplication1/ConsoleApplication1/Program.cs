@@ -49,6 +49,12 @@ namespace ConsoleApplication2
             Complex result = new Complex(this.a / c.a, this.b / c.b);
             return result;
         }
+
+        public static Complex operator +(Complex c, Complex d)
+        {
+            Complex result = new Complex(c.a + d.a, c.b + d.b);
+            return result;
+        }
     }
     class Program
     {
@@ -63,6 +69,7 @@ namespace ConsoleApplication2
             Complex.print(c.multiply(a1));
             Complex d = new Complex(8, 3);
             Complex.print(b.divide(d));
+            Complex.print(c + d);
             Console.ReadKey();
         }
     }
