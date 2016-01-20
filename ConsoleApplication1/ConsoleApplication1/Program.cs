@@ -16,6 +16,11 @@ namespace ConsoleApplication2
             this.b = b;
         }
 
+        public static void print(Complex w)
+        {
+            Console.WriteLine(w);
+        }
+
         public override string ToString()
         {
             return a + "/" + b;
@@ -27,9 +32,15 @@ namespace ConsoleApplication2
             return result;
         }
 
-        public Complex substract(Complex c)
+        public Complex subtract(Complex c)
         {
             Complex result = new Complex(this.a - c.a, this.b - c.b);
+            return result;
+        }
+
+        public Complex multiply(Complex c)
+        {
+            Complex result = new Complex(this.a * c.a, this.b * c.b);
             return result;
         }
 
@@ -38,10 +49,13 @@ namespace ConsoleApplication2
     {
         static void Main(string[] args)
         {
-            Complex c = new Complex(5, 6);
-            Complex d = new Complex(5, 7);
-            Complex w = c.add(d);
-            Console.WriteLine(w);
+            Complex a = new Complex(5, 6);
+            Complex a1 = new Complex(5, 7);
+            Complex.print(a.add(a1));
+            Complex b = new Complex(64, 18);
+            Complex.print(b.subtract(a1));
+            Complex c = new Complex(2, 3);
+            Complex.print(c.multiply(a1));
             Console.ReadKey();
         }
     }
